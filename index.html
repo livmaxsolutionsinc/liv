@@ -207,7 +207,7 @@
   .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 2.5rem; position: relative; }
   .steps::before { content: ''; position: absolute; top: 2.5rem; left: 16.67%; right: 16.67%; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,92,58,0.4), transparent); }
   .step { text-align: center; }
-  .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--terra); color: var(--white); font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+  .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--terra); color: var(--white); font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
   .step-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
   .step-body { color: rgba(255,255,255,0.5); font-size: 0.88rem; line-height: 1.7; }
 
@@ -221,7 +221,7 @@
   .reviewer-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--terra); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
   .reviewer-name { font-weight: 600; font-size: 0.875rem; color: var(--brown); }
   .reviewer-meta { font-size: 0.73rem; color: var(--gray); }
-  .review-tag { display: inline-block; background: rgba(45,107,74,0.1); color: var(--forest); font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 100px; margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .review-tag { display: inline-block; background: rgba(45,107,74,0.1); color: var(--forest); font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 100px; margin-top: 0.3rem; text-transform: uppercase; }
   .reviews-meta { text-align: center; margin-top: 2rem; color: var(--gray); font-size: 0.9rem; }
 
   /* ── FAQ ── */
@@ -256,14 +256,14 @@
   #crmWebToEntityForm.zcwf_lblLeft { background-color: transparent !important; color: var(--brown) !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
   #crmWebToEntityForm .zcwf_title { display: none !important; }
   #crmWebToEntityForm .zcwf_row { margin: 0 0 1.1rem 0 !important; }
-  #crmWebToEntityForm .zcwf_col_lab { width: 100% !important; float: none !important; font-family: var(--font-body) !important; font-size: 0.75rem !important; font-weight: 600 !important; color: var(--gray) !important; text-transform: uppercase; letter-spacing: 0.07em; padding: 0 0 0.4rem 0 !important; margin: 0 !important; }
+  #crmWebToEntityForm .zcwf_col_lab { width: 100% !important; float: none !important; font-family: var(--font-body) !important; font-size: 0.75rem !important; font-weight: 600 !important; color: var(--brown) !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; }
   #crmWebToEntityForm .zcwf_col_fld { width: 100% !important; float: none !important; padding: 0 !important; margin: 0 !important; }
   #crmWebToEntityForm .zcwf_col_fld input[type=text],
   #crmWebToEntityForm .zcwf_col_fld input[type=email],
-  #crmWebToEntityForm .zcwf_col_fld textarea { width: 100% !important; float: none !important; border: 1.5px solid var(--gray-light) !important; border-radius: 10px !important; padding: 11px 14px !important; font-family: var(--font-body) !important; font-size: 0.95rem !important; color: var(--brown) !important; background: var(--cream) !important; transition: border-color .2s, box-shadow .2s !important; outline: none !important; }
+  #crmWebToEntityForm .zcwf_col_fld textarea { width: 100% !important; float: none !important; border: 1.5px solid var(--gray-light) !important; border-radius: 10px !important; padding: 11px 14px !important; font-family: var(--font-body) !important; font-size: 0.95rem !important; }
   #crmWebToEntityForm .zcwf_col_fld input[type=text]:focus,
   #crmWebToEntityForm .zcwf_col_fld input[type=email]:focus { border-color: var(--terra) !important; background: var(--white) !important; box-shadow: 0 0 0 3px rgba(200,92,58,0.1) !important; }
-  #crmWebToEntityForm .zcwf_col_fld input[type=submit].formsubmit { width: 100% !important; background: var(--terra) !important; color: var(--white) !important; border: none !important; border-radius: 100px !important; padding: 15px 28px !important; font-family: var(--font-body) !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer !important; transition: all .2s !important; letter-spacing: 0.01em; }
+  #crmWebToEntityForm .zcwf_col_fld input[type=submit].formsubmit { width: 100% !important; background: var(--terra) !important; color: var(--white) !important; border: none !important; border-radius: 100px !important; padding: 13px !important; font-weight: 700 !important; font-size: 1rem !important; cursor: pointer !important; transition: all .2s !important; }
   #crmWebToEntityForm .zcwf_col_fld input[type=submit].formsubmit:hover { background: var(--terra-dark) !important; transform: translateY(-1px) !important; box-shadow: 0 6px 20px rgba(200,92,58,0.25) !important; }
   #crmWebToEntityForm .zcwf_col_fld input[type=reset] { display: none !important; }
   #crmWebToEntityForm .zcwf_col_help { display: none !important; }
@@ -276,7 +276,7 @@
   .footer-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
   .btn-primary-light { background: var(--white); color: var(--forest); padding: 15px 30px; border-radius: 100px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all .2s; }
   .btn-primary-light:hover { background: var(--cream); }
-  .btn-outline-light { background: transparent; color: var(--white); padding: 15px 30px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 1.5px solid rgba(255,255,255,0.4); transition: all .2s; }
+  .btn-outline-light { background: transparent; color: var(--white); padding: 15px 30px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 1.5px solid rgba(255,255,255,0.5); transition: all .2s; }
   .btn-outline-light:hover { border-color: rgba(255,255,255,0.8); }
 
   /* ── FOOTER ── */
@@ -417,26 +417,26 @@
     <h2 class="section-title">Real results. <span class="t">Not just policies.</span></h2>
     <p class="section-sub">We don't sell products — we build financial security plans that change what's possible for your family.</p>
     <div class="value-props">
-      <div class="vp-card"><div class="vp-icon">🏠</div><div class="vp-tag">Family Protection</div><div class="vp-title">Your family keeps the house, the car, and the lifestyle — even if you're not there.</div><p class="vp-body">We match you with the right coverage so your loved ones never have to choose between paying rent and grieving. Real income replacement. Real peace of mind.</p></div>
-      <div class="vp-card"><div class="vp-icon">🌅</div><div class="vp-tag">Tax-Free Retirement</div><div class="vp-title">You retire with tax-free income — no surprises from the IRS.</div><p class="vp-body">Our IUL strategies let your money grow protected from market crashes and tax hikes. Index-linked returns, zero downside risk, and a tax-free income stream for life.</p></div>
-      <div class="vp-card"><div class="vp-icon">🎓</div><div class="vp-tag">College Planning</div><div class="vp-title">Your kids go to college — fully funded — without student loans.</div><p class="vp-body">Life insurance as a college planning tool outperforms 529 plans in flexibility and tax efficiency. Your child starts adulthood with wealth, not debt.</p></div>
+      <div class="vp-card"><div class="vp-icon">🏠</div><div class="vp-tag">Family Protection</div><div class="vp-title">Your family keeps the house, the car, and the lifestyle — even if you're gone.</div><p class="vp-body">Life insurance that actually covers the bills — mortgage, college, living expenses.</p></div>
+      <div class="vp-card"><div class="vp-icon">🌅</div><div class="vp-tag">Tax-Free Retirement</div><div class="vp-title">You retire with tax-free income — no surprises from the IRS.</div><p class="vp-body">Indexed Universal Life (IUL) policies that grow your money without market risk.</p></div>
+      <div class="vp-card"><div class="vp-icon">🎓</div><div class="vp-tag">College Planning</div><div class="vp-title">Your kids go to college — fully funded — without student loans.</div><p class="vp-body">Build a college fund with tax advantages that traditional 529s can't match.</p></div>
     </div>
     <p class="section-eyebrow">✦ Every stage of life. Every goal.</p>
     <h2 class="section-title" style="margin-bottom:0.5rem;">One trusted partner.</h2>
     <p class="section-sub">Tap the area that matters most to you — we'll personalize your consultation around it.</p>
     <div class="services-grid" id="servicesGrid">
-      <div class="svc-card" onclick="toggleService(this,'Individual Protection')"><div class="svc-icon">🛡️</div><div class="svc-name">Individual Protection</div><div class="svc-desc">Term & whole life tailored to your needs.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Family Coverage')"><div class="svc-icon">👨‍👩‍👧‍👦</div><div class="svc-name">Family Coverage</div><div class="svc-desc">Secure income, mortgage, and lifestyle.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Business Insurance')"><div class="svc-icon">🏢</div><div class="svc-name">Business Insurance</div><div class="svc-desc">Key person, buy-sell, executive benefits.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Final Expense')"><div class="svc-icon">🕊️</div><div class="svc-name">Final Expense</div><div class="svc-desc">Affordable end-of-life coverage.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'College Planning')"><div class="svc-icon">🎓</div><div class="svc-name">College Planning</div><div class="svc-desc">Tax-smart education funding.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Tax-Free Retirement')"><div class="svc-icon">🌅</div><div class="svc-name">Tax-Free Retirement</div><div class="svc-desc">IUL — no market risk, tax-free income.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Wealth Building')"><div class="svc-icon">📈</div><div class="svc-name">Wealth Building</div><div class="svc-desc">Grow and protect assets permanently.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Mortgage Protection')"><div class="svc-icon">🏠</div><div class="svc-name">Mortgage Protection</div><div class="svc-desc">Keep your family in their home.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Living Benefits')"><div class="svc-icon">💊</div><div class="svc-name">Living Benefits</div><div class="svc-desc">Access benefit early on critical illness.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Debt Protection')"><div class="svc-icon">🔒</div><div class="svc-name">Debt Protection</div><div class="svc-desc">Debts don't burden those you love.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Child Life Insurance')"><div class="svc-icon">👶</div><div class="svc-name">Child Life Insurance</div><div class="svc-desc">Lock in rates, build cash value early.</div></div>
-      <div class="svc-card" onclick="toggleService(this,'Legacy Planning')"><div class="svc-icon">📜</div><div class="svc-name">Legacy Planning</div><div class="svc-desc">Tax-free inheritance for generations.</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Individual Protection')"><div class="svc-icon">🛡️</div><div class="svc-name">Individual Protection</div><div class="svc-desc">Term & whole life</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Family Coverage')"><div class="svc-icon">👨‍👩‍👧‍👦</div><div class="svc-name">Family Coverage</div><div class="svc-desc">Secure your loved ones</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Business Insurance')"><div class="svc-icon">🏢</div><div class="svc-name">Business Insurance</div><div class="svc-desc">Key person, buy-sell</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Final Expense')"><div class="svc-icon">🕊️</div><div class="svc-name">Final Expense</div><div class="svc-desc">Affordable end-of-life</div></div>
+      <div class="svc-card" onclick="toggleService(this,'College Planning')"><div class="svc-icon">🎓</div><div class="svc-name">College Planning</div><div class="svc-desc">Tax-smart education</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Tax-Free Retirement')"><div class="svc-icon">🌅</div><div class="svc-name">Tax-Free Retirement</div><div class="svc-desc">IUL — no market risk</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Wealth Building')"><div class="svc-icon">📈</div><div class="svc-name">Wealth Building</div><div class="svc-desc">Grow and protect assets</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Mortgage Protection')"><div class="svc-icon">🏠</div><div class="svc-name">Mortgage Protection</div><div class="svc-desc">Keep your family home</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Living Benefits')"><div class="svc-icon">💊</div><div class="svc-name">Living Benefits</div><div class="svc-desc">Access early on illness</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Debt Protection')"><div class="svc-icon">🔒</div><div class="svc-name">Debt Protection</div><div class="svc-desc">Debts won't burden them</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Child Life Insurance')"><div class="svc-icon">👶</div><div class="svc-name">Child Life Insurance</div><div class="svc-desc">Lock in rates early</div></div>
+      <div class="svc-card" onclick="toggleService(this,'Legacy Planning')"><div class="svc-icon">📜</div><div class="svc-name">Legacy Planning</div><div class="svc-desc">Tax-free inheritance</div></div>
     </div>
     <p class="select-counter">Select all that apply · <strong id="countDisplay">0 selected</strong> · then get your personalized quote below</p>
     <div class="services-cta"><a href="#contact" class="btn-primary">Not sure where to start? → Let's find the right fit together</a></div>
@@ -450,9 +450,9 @@
     <h2 class="section-title">Simple, clear, built around you.</h2>
     <p class="section-sub">From first conversation to active policy — we handle everything. You just show up.</p>
     <div class="steps">
-      <div class="step"><div class="step-num">01</div><div class="step-title">Choose Your Interests</div><p class="step-body">Select the coverage areas or financial goals that matter most to you. Takes less than 60 seconds. No commitment required.</p></div>
-      <div class="step"><div class="step-num">02</div><div class="step-title">Free Strategy Call</div><p class="step-body">A licensed LivMax advisor reviews your needs, shops dozens of carriers, and presents your best options — at zero cost to you.</p></div>
-      <div class="step"><div class="step-num">03</div><div class="step-title">Get Covered — Fast</div><p class="step-body">Most policies are issued within 24–72 hours. We handle all the paperwork. You get peace of mind knowing your family is protected.</p></div>
+      <div class="step"><div class="step-num">01</div><div class="step-title">Choose Your Interests</div><p class="step-body">Select the coverage areas or financial goals that matter most to you. Takes 30 seconds.</p></div>
+      <div class="step"><div class="step-num">02</div><div class="step-title">Free Strategy Call</div><p class="step-body">A licensed LivMax advisor reviews your needs, shops dozens of carriers, and proposes your plan.</p></div>
+      <div class="step"><div class="step-num">03</div><div class="step-title">Get Covered — Fast</div><p class="step-body">Most policies are issued within 24–72 hours. We handle all the paperwork. You relax.</p></div>
     </div>
   </div>
 </section>
@@ -464,9 +464,9 @@
     <h2 class="section-title">Families trust <span class="t">LivMax.</span></h2>
     <p class="section-sub">Over 5,000 clients have trusted us with what matters most. Here are a few of their stories.</p>
     <div class="reviews-grid">
-      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"I kept putting it off for years thinking I couldn't afford it. LivMax found me a $500K policy for $34/month. I cried when I signed — not from sadness, but from relief."</p><div class="reviewer"><div class="reviewer-avatar">M</div><div><div class="reviewer-name">Maria T.</div><div class="reviewer-meta">Mother of 3 · Miami, FL</div><span class="review-tag">Family Coverage</span></div></div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"They explained the tax-free retirement strategy in a way I actually understood. I wish I had started this 10 years ago. Game changer for my business."</p><div class="reviewer"><div class="reviewer-avatar">R</div><div><div class="reviewer-name">Robert H.</div><div class="reviewer-meta">Business Owner · Atlanta, GA</div><span class="review-tag">Tax-Free Retirement</span></div></div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"After losing my father with no final expense coverage, I knew I needed to act. LivMax made the whole process easy, fast, and compassionate."</p><div class="reviewer"><div class="reviewer-avatar">T</div><div><div class="reviewer-name">Tanya B.</div><div class="reviewer-meta">Registered Nurse · Houston, TX</div><span class="review-tag">Final Expense</span></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"I kept putting it off for years thinking I couldn't afford it. LivMax found me a $500K policy for $32/month. Best decision I made for my kids."</p><div class="reviewer"><div class="reviewer-avatar">M</div><div><div class="reviewer-name">Maria S.</div><div class="reviewer-meta">Verified Customer</div></div></div><span class="review-tag">Family Protection</span></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"They explained the tax-free retirement strategy in a way I actually understood. I wish I had started 10 years earlier. Highly recommend."</p><div class="reviewer"><div class="reviewer-avatar">J</div><div><div class="reviewer-name">James T.</div><div class="reviewer-meta">Verified Customer</div></div></div><span class="review-tag">Retirement Planning</span></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"After losing my father with no final expense coverage, I knew I needed to act. LivMax made the whole process painless. Zero pressure."</p><div class="reviewer"><div class="reviewer-avatar">D</div><div><div class="reviewer-name">David L.</div><div class="reviewer-meta">Verified Customer</div></div></div><span class="review-tag">Final Expense</span></div>
     </div>
     <p class="reviews-meta">⭐⭐⭐⭐⭐ <strong>Rated 5 stars</strong> by 200+ clients on Google</p>
   </div>
@@ -479,12 +479,12 @@
     <h2 class="section-title">Answered <span class="f">honestly.</span></h2>
     <p class="section-sub">We believe an educated client makes the best decisions. No jargon. No pressure. Just clear answers.</p>
     <div class="faq-list">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do I need a medical exam to get covered? <span class="faq-icon">+</span></div><div class="faq-a">Most of our plans require no medical exam at all. We find the right carrier based on your health profile — quickly and without surprises. Many clients get approved same-day.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much does life insurance actually cost? <span class="faq-icon">+</span></div><div class="faq-a">Less than most people think. A healthy 35-year-old can get $500,000 in coverage for around $25–$40/month. Your consultation is completely free — let's find your exact number with no obligation.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is this only for people with families? <span class="faq-icon">+</span></div><div class="faq-a">Not at all. Single professionals use it for wealth building. Business owners use it for tax-free retirement and key person coverage. Life insurance is one of the most versatile financial tools available — for any life stage.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I already have life insurance through work? <span class="faq-icon">+</span></div><div class="faq-a">Group employer plans are usually 10x less coverage than what you actually need — and you lose them the moment you change jobs or get laid off. We'll show you the gap and fill it properly.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does it take to get covered? <span class="faq-icon">+</span></div><div class="faq-a">Some policies can be issued same-day. Most take 24–72 hours. We handle all the paperwork and communicate with the carrier on your behalf — you just approve and sign.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can life insurance really replace a 401k for retirement? <span class="faq-icon">+</span></div><div class="faq-a">In many cases, it outperforms it. IUL (Indexed Universal Life) policies offer tax-free growth, tax-free withdrawals, zero market loss, and a death benefit — none of which a 401k provides simultaneously. We'll run the numbers for your specific situation.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do I need a medical exam to get covered? <span class="faq-icon">+</span></div><div class="faq-a">Most of our plans require no medical exam, especially for amounts under $500K. We have options for nearly every health situation.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much does life insurance actually cost? <span class="faq-icon">+</span></div><div class="faq-a">Less than most people think. Average 30-year-old gets $500K term coverage for $25–40/month. We'll shop 15+ carriers to find your best rate.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is this only for people with families? <span class="faq-icon">+</span></div><div class="faq-a">Not at all. Single professionals use it for mortgage protection, wealth building, and retirement. Business owners use it for key person coverage.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I already have life insurance through work? <span class="faq-icon">+</span></div><div class="faq-a">Group employer plans usually cover 1–2x salary. If you leave that job, coverage ends. Personal coverage stays with you for life.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does it take to get covered? <span class="faq-icon">+</span></div><div class="faq-a">Some policies can be issued same-day. Most take 24–72 hours after underwriting. We handle all the paperwork — you just sign.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can life insurance really replace a 401k for retirement? <span class="faq-icon">+</span></div><div class="faq-a">In many cases, yes. Indexed Universal Life (IUL) grows tax-free, has no contribution limits, and you can borrow from it tax-free in retirement.</div></div>
     </div>
   </div>
 </section>
@@ -501,9 +501,9 @@
           <strong>✦ Your selected interests</strong>
           <span id="selectedText">No services selected yet — choose above ↑</span>
         </div>
-        <div class="benefit-item"><div class="benefit-icon">🏦</div><div><div class="benefit-title">Independent Advisors</div><div class="benefit-desc">We shop dozens of carriers to find your best rate — not just one company's products.</div></div></div>
-        <div class="benefit-item"><div class="benefit-icon">🎯</div><div><div class="benefit-title">Zero Obligation</div><div class="benefit-desc">Your consultation is 100% free. We educate first, sell only when it makes sense for you.</div></div></div>
-        <div class="benefit-item"><div class="benefit-icon">📋</div><div><div class="benefit-title">Licensed Professionals</div><div class="benefit-desc">Fully licensed in multiple states. Trained to find the right fit for your exact situation.</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon">🏦</div><div><div class="benefit-title">Independent Advisors</div><div class="benefit-desc">We shop dozens of carriers to find your best rates and coverage.</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon">🎯</div><div><div class="benefit-title">Zero Obligation</div><div class="benefit-desc">Your consultation is 100% free. We educate first, sell only if it makes sense.</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon">📋</div><div><div class="benefit-title">Licensed Professionals</div><div class="benefit-desc">Fully licensed in multiple states. Trained to explain complex topics simply.</div></div></div>
       </div>
       <div class="zoho-form-wrapper">
         <div class="zoho-form-header">
@@ -514,21 +514,20 @@
           <div id="crmWebToEntityForm" class="zcwf_lblLeft crmWebToEntityForm">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <META HTTP-EQUIV="content-type" CONTENT="text/html;charset=UTF-8">
-            <form id="webform7462423000000698005" action="https://crm.zoho.com/crm/WebToLeadForm" name="WebToLeads7462423000000698005" method="POST" onSubmit="javascript:document.charset='UTF-8'; return checkMandatory7462423000000698005()" accept-charset="UTF-8">
+            <form id="webform7462423000000698005" action="https://crm.zoho.com/crm/WebToLeadForm" name="WebToLeads7462423000000698005" method="POST" onSubmit="return checkMandatory7462423000000698005();">
               <input type="text" style="display:none;" name="xnQsjsdp" value="939d1312ed65e03051061a6dcd61cda913289c1e56bb4c1077bc3b762e03cb20">
               <input type="hidden" name="zc_gad" id="zc_gad" value="">
               <input type="text" style="display:none;" name="xmIwtLD" value="806c0a6efa6da0365587bdb8d2ad95572a579f85351658e1fbd3eccc499c346dbdd9ec640509f400d8dd1409feaa10e8">
               <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
-              <input type="text" style="display:none;" name="returnURL" value="null">
+              <input type="text" style="display:none;" name="returnURL" value="https://livmaxsolutions.com/thank-you.html">
               <!-- Do not remove this code. -->
-              <div class="zcwf_row"><div class="zcwf_col_lab"><label for="First_Name">First Name</label></div><div class="zcwf_col_fld"><input type="text" id="First_Name" aria-required="false" aria-label="First Name" name="First Name" maxlength="40"></div></div>
-              <div class="zcwf_row"><div class="zcwf_col_lab"><label for="Last_Name">Last Name <span style="color:var(--terra);">*</span></label></div><div class="zcwf_col_fld"><input type="text" id="Last_Name" aria-required="true" aria-label="Last Name" name="Last Name" maxlength="80"></div></div>
+              <div class="zcwf_row"><div class="zcwf_col_lab"><label for="First_Name">First Name</label></div><div class="zcwf_col_fld"><input type="text" id="First_Name" aria-required="false" aria-label="First Name" name="First_Name" maxlength="40"></div></div>
+              <div class="zcwf_row"><div class="zcwf_col_lab"><label for="Last_Name">Last Name <span style="color:var(--terra);">*</span></label></div><div class="zcwf_col_fld"><input type="text" id="Last_Name" aria-required="true" aria-label="Last Name" name="Last_Name" maxlength="80"></div></div>
               <div class="zcwf_row"><div class="zcwf_col_lab"><label for="Email">Email</label></div><div class="zcwf_col_fld"><input type="text" ftype="email" autocomplete="false" id="Email" aria-required="false" aria-label="Email" name="Email" maxlength="100"></div></div>
               <div class="zcwf_row"><div class="zcwf_col_lab"><label for="Phone">Phone</label></div><div class="zcwf_col_fld"><input type="text" id="Phone" aria-required="false" aria-label="Phone" name="Phone" maxlength="30"></div></div>
-              <div class="zcwf_row"><div class="zcwf_col_lab"><label for="Address_-_Zip_/_Postal_Code">Zip / Postal Code</label></div><div class="zcwf_col_fld"><input type="text" id="Address_-_Zip_/_Postal_Code" aria-required="false" aria-label="Zip Code" name="Address - Zip / Postal Code" maxlength="255"></div></div>
+              <div class="zcwf_row"><div class="zcwf_col_lab"><label for="Address_-_Zip_/_Postal_Code">Zip / Postal Code</label></div><div class="zcwf_col_fld"><input type="text" id="Address_-_Zip_/_Postal_Code" aria-required="false" aria-label="Address_-_Zip_/_Postal_Code" name="Address_-_Zip_/_Postal_Code" maxlength="30"></div></div>
               <input type="hidden" id="zohoSelectedServices" name="Description" value="">
-              <input type="text" style="display:none;" name="aG9uZXlwb3Q" value="">
-              <div class="zcwf_row"><div class="zcwf_col_lab"></div><div class="zcwf_col_fld"><input type="submit" id="formsubmit" role="button" class="formsubmit zcwf_button" value="Request My Free Consultation →" aria-label="Submit" title="Submit"></div></div>
+              <div class="zcwf_row"><div class="zcwf_col_lab"></div><div class="zcwf_col_fld"><input type="submit" id="formsubmit" role="button" class="formsubmit zcwf_button" value="Request My Free Consultation"></div></div>
             </form>
           </div>
           <div class="form-privacy">🔒 100% private · Never sold or shared · Licensed & regulated</div>
@@ -559,14 +558,14 @@
     <a href="mailto:info@livmaxsolutions.com">Email Us</a>
   </div>
   <p>© 2026 LivMax Solutions. All rights reserved.</p>
-  <p class="footer-legal">LivMax Solutions is an independent life insurance agency. Products and availability vary by state. Life insurance products are not deposits or obligations of any bank, are not FDIC insured, and are not guaranteed by any bank or government agency. This website is for informational purposes only and does not constitute financial, legal, or tax advice. Please consult a licensed professional for advice specific to your situation. Licensed in multiple U.S. states.</p>
+  <p class="footer-legal">LivMax Solutions is an independent life insurance agency. Products and availability vary by state. Life insurance products are not deposits or obligations of any bank, are not FDIC insured, and carry investment risk including possible loss of principal.</p>
 </footer>
 
 <!-- Zoho Analytics — Do not remove -->
-<script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=b005c4811722b6338c106f5baf93ade5132c24325fd374eaa36a1521f017360b17f3cb96358181e79d018aaf129a258agid7b10d436eda6ae68069a6c6ce6ef6c1e4c3dbab195da763382407048b0df5d7bgidbcf5f7652a5909f5b61a5238401d095e4ab0f1a101178827c3356ff6b80cd2d3gidb9ce68ca448d056ad5b48d13b472e547212b3356f046ad58b8d7c11c1e9b07ac&tw=8eac39545b530f228f0d1976f330e8ad5c7bc120aba152e3316189b3e8397756"></script>
+<script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=b005c4811722b6338c106f5baf93ade5132c24325fd374eaa36a1521f017360b17f3cb96358181e79d018aaf129a258agid7b10d436eda5f2e9bcbdda4dcc37e54b652c4ed56adfd35a61362ab6d81ab0b8d"></script>
 
 <script>
-  /* Zoho validation — original, unmodified */
+  /* Zoho validation — FIXED */
   function validateEmail7462423000000698005(){
     var form=document.forms['WebToLeads7462423000000698005'];
     var emailFld=form.querySelectorAll('[ftype=email]');
@@ -604,7 +603,7 @@
       smarturlfield.setAttribute('name','service');webform.appendChild(smarturlfield);
     }
     document.getElementById('zohoSelectedServices').value=selectedServices.join(', ');
-    document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled',true);
+    return true;
   }
 
   /* Service selector */
