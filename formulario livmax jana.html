@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LivMax Solutions × Jana Vargas — Cadastro</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #2C1F14;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    /* Background circles */
+    body::before, body::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::before {
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(196,112,79,0.18), transparent 70%);
+      top: -80px; left: -80px;
+    }
+    body::after {
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(212,168,83,0.14), transparent 70%);
+      bottom: -60px; right: -60px;
+    }
+
+    .card {
+      position: relative; z-index: 1;
+      background: #F5EFE6;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+      padding: 40px 36px 36px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.38);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #C4704F;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .title {
+      font-size: 26px;
+      color: #3D2B1F;
+      font-weight: bold;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .title span { color: #C4704F; }
+
+    .subtitle {
+      font-size: 13px;
+      color: #7A5C4A;
+      font-style: italic;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, #C4704F, #D4A853, #3A5A40);
+      margin-bottom: 24px;
+      border-radius: 2px;
+    }
+
+    .voucher-box {
+      background: #D4A853;
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .voucher-amount {
+      font-size: 32px;
+      font-weight: bold;
+      color: #3D2B1F;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .voucher-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: #3D2B1F;
+      line-height: 1.4;
+    }
+
+    .voucher-text strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    label {
+      display: block;
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #3D2B1F;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #EAD9C6;
+      border-radius: 8px;
+      background: #fff;
+      font-size: 14px;
+      color: #3D2B1F;
+      font-family: 'Arial', sans-serif;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #C4704F;
+      box-shadow: 0 0 0 3px rgba(196,112,79,0.12);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: #3D2B1F;
+      color: #D4A853;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 4px;
+    }
+
+    .btn:hover { background: #C4704F; color: #fff; }
+    .btn:active { transform: scale(0.98); }
+
+    .legal {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      color: #7A5C4A;
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    .brands {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #EAD9C6;
+    }
+
+    .brand-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: #3D2B1F;
+    }
+
+    .brand-sep { color: #D4A853; font-size: 14px; }
+
+    /* Success state */
+    .success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-icon {
+      font-size: 52px;
+      margin-bottom: 14px;
+    }
+
+    .success h2 {
+      font-size: 22px;
+      color: #3A5A40;
+      margin-bottom: 8px;
+    }
+
+    .success p {
+      font-size: 13px;
+      color: #7A5C4A;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 420px) {
+      .card { padding: 30px 22px 28px; }
+      .row { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- FORM VIEW -->
+  <div id="formView">
+    <div class="badge">Parceria Exclusiva</div>
+    <div class="title">LivMax Solutions <span>×</span> Jana Vargas</div>
+    <div class="subtitle">Ao preencher seus dados, você ganha uma <strong style="color:#C4704F;font-style:normal;">consultoria exclusiva</strong> e ainda concorre a <strong style="color:#C4704F;font-style:normal;">$100 em serviços</strong> na Jana Nail Designer!</div>
+    <div class="divider"></div>
+
+    <div class="voucher-box">
+      <div class="voucher-amount">$100</div>
+      <div class="voucher-text">
+        <strong>Voucher em serviços Jana Vargas</strong>
+        Sorteio ao vivo no Instagram —
+        4 de Agosto de 2026
+      </div>
+    </div>
+
+    <form id="leadForm" action="https://formspree.io/f/xjgqjonq" method="POST">
+      <!-- Hidden fields for context -->
+      <input type="hidden" name="_subject" value="Novo cadastro — LivMax x Jana Vargas" />
+      <input type="hidden" name="_replyto" value="" />
+
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+
+      <div class="row">
+        <div>
+          <label for="nascimento">Data de Nascimento</label>
+          <input type="date" id="nascimento" name="data_nascimento" required />
+        </div>
+        <div>
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(000) 000-0000" required />
+        </div>
+      </div>
+
+      <label for="estado">Estado</label>
+      <select id="estado" name="estado" required>
+        <option value="" disabled selected>Selecione seu estado</option>
+        <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+        <option>Arkansas</option><option>California</option><option>Colorado</option>
+        <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+        <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+        <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+        <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+        <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+        <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+        <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+        <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+        <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+        <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+        <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+        <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+        <option>Texas</option><option>Utah</option><option>Vermont</option>
+        <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+        <option>Wisconsin</option><option>Wyoming</option>
+      </select>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+      <button type="submit" class="btn">Quero Participar do Sorteio →</button>
+    </form>
+
+    <div class="legal">
+      Ao se cadastrar, você concorda em receber informações sobre<br>
+      educação financeira e planejamento de aposentadoria da LivMax Solutions.
+    </div>
+
+    <div class="brands">
+      <span class="brand-name">LivMax Solutions</span>
+      <span class="brand-sep">×</span>
+      <span class="brand-name">Jana Vargas Nail Designer</span>
+    </div>
+  </div>
+
+  <!-- SUCCESS VIEW -->
+  <div class="success" id="successView">
+    <div class="success-icon">💅</div>
+    <h2>Cadastro confirmado!</h2>
+    <p>
+      Você está concorrendo ao voucher de <strong>$100</strong> em serviços com Jana Vargas.<br><br>
+      O sorteio será ao vivo no Instagram no dia <strong>4 de agosto de 2026</strong>.<br>
+      Fique atenta!
+    </p>
+    <div class="brands" style="margin-top: 28px;">
+      <span class="brand-name">LivMax Solutions</span>
+      <span class="brand-sep">×</span>
+      <span class="brand-name">Jana Vargas</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById('leadForm');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.btn');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        document.getElementById('formView').style.display = 'none';
+        document.getElementById('successView').style.display = 'block';
+      } else {
+        btn.textContent = 'Erro — tente novamente';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Erro — tente novamente';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
